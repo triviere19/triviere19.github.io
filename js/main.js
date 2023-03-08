@@ -37,7 +37,7 @@ function setBg(){
         document.body.style.backgroundImage = "url('upside-down-emoji.jpg')"
         greeting.textContext = 'Ohayo';
     }
-    else if (hour<18){
+    else if (hour > 18){
         document.body.style.backgroundImage = "url('upside-down-emoji.jpg')"
         greeting.textContext = 'Oyasumi';
     }
