@@ -34,15 +34,15 @@ function setBg(){
         hour = today.getHours();
 
     if (hour < 12){
-        document.body.style.backgroundImage = "url('upside-down-emoji.jpg')"
+        document.body.style.backgroundImage = "url('upside-down-emoji.jpg')";
         greeting.textContext = 'Ohayo';
     }
     else if (hour > 18){
-        document.body.style.backgroundImage = "url('upside-down-emoji.jpg')"
+        document.body.style.backgroundImage = "url('upside-down-emoji.jpg')";
         greeting.textContext = 'Oyasumi';
     }
     else {
-        document.body.style.backgroundImage = "url('upside-down-emoji.jpg')"
+        document.body.style.backgroundImage = "url('upside-down-emoji.jpg')";
         greeting.textContext = 'Konnichiwa';
     }
 }
