@@ -1,4 +1,5 @@
 //DOM Elements
+const key = process.env.APPLE_MUSIC_KEY;
 
 var time,
     greeting,
