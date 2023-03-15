@@ -28,6 +28,27 @@ import * as MusicKit from 'https://js-cdn.music.apple.com/musickit/v1/musickit.j
 //  console.log(error);
 //});
 
+//APPLE MUSIC STUFF
+const fetch = require('node-fetch');
+const key = process.env.APPLE_MUSIC_KEY;
+const teamID = process.env.APPLE_TEAMID_KEY;
+const keyid = process.env.APPLE_MUSIC_KEYID;
+
+const generateToken = () => {
+  const jwt = require('jsonwebtoken');
+  const token = jwt.sign({}, privateKey, {
+    algorithm: 'ES256',
+    expiresIn: '180d',
+    issuer: teamId,
+    header: {
+      alg: 'ES256',
+      kid: keyId,
+      typ: 'JWT',
+    },
+  });
+  return token;
+};
+
 //DOM Elements
 var time,
     greeting,
@@ -105,27 +126,6 @@ function setBG(){
         greeting.textContext = "'sup";
     }
 }
-
-//APPLE MUSIC STUFF
-const fetch = require('node-fetch');
-const key = process.env.APPLE_MUSIC_KEY;
-const teamID = process.env.APPLE_TEAMID_KEY;
-const keyid = process.env.APPLE_MUSIC_KEYID;
-
-const generateToken = () => {
-  const jwt = require('jsonwebtoken');
-  const token = jwt.sign({}, privateKey, {
-    algorithm: 'ES256',
-    expiresIn: '180d',
-    issuer: teamId,
-    header: {
-      alg: 'ES256',
-      kid: keyId,
-      typ: 'JWT',
-    },
-  });
-  return token;
-};
 
 function getSongOTD(){
     const token = generateToken();
