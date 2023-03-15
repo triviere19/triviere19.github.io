@@ -1,6 +1,34 @@
-//DOM Elements
-const key = process.env.APPLE_MUSIC_KEY;
+import * as MusicKit from 'https://js-cdn.music.apple.com/musickit/v1/musickit.js';
 
+//// 1. Register for the Apple Music API and generate an API key
+//const apiKey = 'your_api_key_here';
+//
+//// 2. Authenticate your API key
+//const axios = require('axios');
+//
+//axios.post('https://api.music.apple.com/v1/me/library', {
+//  headers: {
+//    Authorization: `Bearer ${apiKey}`,
+//    'Music-User-Token': 'your_user_token_here'
+//  }
+//}).then(response => {
+//  console.log(response.data);
+//}).catch(error => {
+//  console.log(error);
+//});
+//
+//// 3. Use the Apple Music API to get data
+//axios.get('https://api.music.apple.com/v1/catalog/us/songs/203709340', {
+//  headers: {
+//    Authorization: `Bearer ${apiKey}`
+//  }
+//}).then(response => {
+//  console.log(response.data);
+//}).catch(error => {
+//  console.log(error);
+//});
+
+//DOM Elements
 var time,
     greeting,
     greeting2,
@@ -76,6 +104,62 @@ function setBG(){
     else {
         greeting.textContext = "'sup";
     }
+}
+
+//APPLE MUSIC STUFF
+const fetch = require('node-fetch');
+const key = process.env.APPLE_MUSIC_KEY;
+const teamID = process.env.APPLE_TEAMID_KEY;
+const keyid = process.env.APPLE_MUSIC_KEYID;
+
+const generateToken = () => {
+  const jwt = require('jsonwebtoken');
+  const token = jwt.sign({}, privateKey, {
+    algorithm: 'ES256',
+    expiresIn: '180d',
+    issuer: teamId,
+    header: {
+      alg: 'ES256',
+      kid: keyId,
+      typ: 'JWT',
+    },
+  });
+  return token;
+};
+
+function getSongOTD(){
+    const token = generateToken();
+
+    const playlistId = 'INSERT_YOUR_PLAYLIST_ID_HERE';
+
+    fetch('https://api.music.apple.com/v1/catalog/us/playlists/' + playlistId, {
+      method: 'GET',
+      headers: {
+        Authorization: `Bearer ${token}`,
+        'Music-User-Token': `${process.env.MY_APPLEID_KEY}`,
+      },
+    })
+    .then(response => response.json())
+    .then(data => {
+        // Select a random track
+        const randomIndex = Math.floor(Math.random() * data.data.length);
+        const track = data.data[randomIndex];
+
+        // Retrieve track information
+        fetch('https://api.music.apple.com/v1/catalog/us/songs/' + track.attributes.playParams.id}, {
+            headers: {
+                'Authorization': `Bearer ${token}`,
+                'Music-User-Token': `${process.env.MY_APPLEID_KEY}`
+            }
+
+        })
+        .then(response => response.json())
+        .then(data => console.log(data.attributes))
+        .catch(error => console.error(error));
+    })
+    .catch(error => console.error(error));
+
+
 }
 
 //Run
