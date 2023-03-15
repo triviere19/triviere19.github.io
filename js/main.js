@@ -168,4 +168,5 @@ function main(){
     showTime();
     setBG();
     rotateSpinnyThing();
+    getSongOTD();
 }
