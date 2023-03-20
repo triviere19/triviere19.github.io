@@ -1,32 +1,15 @@
 import * as MusicKit from 'https://js-cdn.music.apple.com/musickit/v1/musickit.js';
 
-//// 1. Register for the Apple Music API and generate an API key
-//const apiKey = 'your_api_key_here';
-//
-//// 2. Authenticate your API key
-//const axios = require('axios');
-//
-//axios.post('https://api.music.apple.com/v1/me/library', {
-//  headers: {
-//    Authorization: `Bearer ${apiKey}`,
-//    'Music-User-Token': 'your_user_token_here'
-//  }
-//}).then(response => {
-//  console.log(response.data);
-//}).catch(error => {
-//  console.log(error);
-//});
-//
-//// 3. Use the Apple Music API to get data
-//axios.get('https://api.music.apple.com/v1/catalog/us/songs/203709340', {
-//  headers: {
-//    Authorization: `Bearer ${apiKey}`
-//  }
-//}).then(response => {
-//  console.log(response.data);
-//}).catch(error => {
-//  console.log(error);
-//});
+MusicKit.configure({
+  affiliateToken: undefined,
+  campaignToken: undefined,
+  declarativeMarkup: true,
+  developerToken: 'DEVELOPER-TOKEN',
+  debug: false,
+  features: ['player-accurate-timing', 'api-data-store', 'api-session-storage', 'api-artist-include'],
+  storefrontId: 'us',
+  suppressErrorDialog: false
+});
 
 //APPLE MUSIC STUFF
 const fetch = require('node-fetch');
@@ -158,8 +141,6 @@ function getSongOTD(){
         .catch(error => console.error(error));
     })
     .catch(error => console.error(error));
-
-
 }
 
 //Run
