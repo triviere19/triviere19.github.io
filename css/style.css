@@ -17,6 +17,7 @@ body{
 
 #time {
     font-size: 8rem;
+    top-margin: 0px;
 }
 
 h1{
@@ -30,4 +31,11 @@ h2{
 
 @media(max-width: 700px){
     font-size: 6rem;
+}
+
+#apollo{
+    width: 20%;
+    height: auto;
+    margin-top: 100px;
+    margin-bottom: 0px;
 }

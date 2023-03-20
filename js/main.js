@@ -1,4 +1,4 @@
-import * as MusicKit from 'https://js-cdn.music.apple.com/musickit/v1/musickit.js';
+/*import * as MusicKit from 'https://js-cdn.music.apple.com/musickit/v1/musickit.js';
 
 MusicKit.configure({
   affiliateToken: undefined,
@@ -31,7 +31,7 @@ const generateToken = () => {
   });
   return token;
 };
-
+*/
 //DOM Elements
 var time,
     greeting,
@@ -109,7 +109,7 @@ function setBG(){
         greeting.textContext = "'sup";
     }
 }
-
+/*
 function getSongOTD(){
     const token = generateToken();
 
@@ -141,7 +141,7 @@ function getSongOTD(){
         .catch(error => console.error(error));
     })
     .catch(error => console.error(error));
-}
+}*/
 
 //Run
 
@@ -149,5 +149,9 @@ function main(){
     showTime();
     setBG();
     rotateSpinnyThing();
-    getSongOTD();
+//    getSongOTD();
+
+    //scroll to top of page
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
