@@ -1,3 +1,8 @@
+@font-face{
+    font-family: Helvetica Neue;
+    src: url(fonts/HelveticaNeue-Medium.otf);
+}
+
 *{
     box-sizing: border-box;
     margin: 0;
