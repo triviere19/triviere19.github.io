@@ -146,7 +146,7 @@ function getSongOTD(){
 //Run
 
 function main(){
-    showTime();
+//    showTime();
     setBG();
     rotateSpinnyThing();
 //    getSongOTD();

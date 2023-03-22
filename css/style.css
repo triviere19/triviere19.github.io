@@ -58,12 +58,22 @@ h2{
 #apollo{
     width: 200px;
     height: auto;
-    margin-top: 100px;
+    margin-top: 20px;
     margin-bottom: 20px;
 }
 
 #greeting{
     font-family: Helvetica Neue Extended Oblique;
+}
+
+.title{
+    background-color: Black;
+    color: White;
+    font-family: Helvetica Neue Extended Oblique;
+    font-size: 100px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    width: 100%;
 }
 
 .art_block{
