@@ -104,6 +104,7 @@ h2{
     padding-top: 10px;
     padding-bottom: 10px;
     border: none;
+    cursor: pointer;
 }
 
 #title_image{
@@ -133,6 +134,7 @@ h2{
 .art_price{
     font-family: Helvetica Neue Bold;
     color: Green;
+    text-decoration: none;
 }
 
 .section_title{
