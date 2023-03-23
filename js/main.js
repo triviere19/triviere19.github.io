@@ -36,7 +36,8 @@ const generateToken = () => {
 var time,
     greeting,
     greeting2,
-    imgSpinnyThing;
+    imgSpinnyThing,
+    titlePageImg;
 
 const loading_anim = [
     "currently hello worlding   ",
@@ -48,6 +49,17 @@ const loading_anim = [
 var loading_idx = 0,
     spinning_idx = 0;
 
+var titlePageImgList = [
+    "IMG_2147.jpg",
+    "IMG_1625.jpg",
+    "F95A1932-27EC-4F4E-B7B2-0E9B825087E2.JPG",
+    "IMG_2149.jpg",
+    "IMG_3428.jpg",
+    "IMG_3639.jpg",
+    "IMG_0229 2.jpg"
+];
+
+var titlePageIdx = 0, lastMin = 0, title_timeout = 10;;
 
 function rotateSpinnyThing(){
     imgSpinnyThing = document.getElementById("spinny_thingy");
@@ -92,9 +104,11 @@ function addZero(n){
 
 function setBG(){
     let today = new Date(),
-        hour = today.getHours();
+        hour = today.getHours(),
+        min = today.getSeconds();
 
     greeting = document.getElementById("greeting");
+    titlePageImg = document.getElementById("title_image");
 
     if (hour < 12 && hour > 3){
 //        document.body.style.backgroundImage = "url('upside-down-emoji.jpg')";
@@ -108,6 +122,24 @@ function setBG(){
     else {
         greeting.textContext = "'sup";
     }
+    if(min > lastMin + title_timeout || (lastMin - min < 60 - title_timeout && lastMin > min)){
+        lastMin = min;
+        titlePageIdx = (titlePageIdx + 1) % (titlePageImgList.length);
+        console.log(titlePageIdx);
+    }
+    titlePageImg.style.backgroundImage = "url(res/titlepage/" + titlePageImgList[titlePageIdx] + ")";
+    titlePageImg.style.backgroundImage.width = "100%";
+    titlePageImg.style.backgroundImage.height = "400px";
+    titlePageImg.style.backgroundSize = "cover";
+
+    //this works vvvv
+    /*var img = new Image();
+    img.onload = function() {
+      titlePageImg.style.height = this.height + "px";
+    }
+    img.src = "res/titlepage/" + titlePageImgList[titlePageIdx];
+    titlePageImg.style.height = img.height + "px";*/
+    setTimeout(setBG, 300);
 }
 /*
 function getSongOTD(){
@@ -144,7 +176,6 @@ function getSongOTD(){
 }*/
 
 //Run
-
 function main(){
 //    showTime();
     setBG();
