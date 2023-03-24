@@ -50,16 +50,23 @@ var loading_idx = 0,
     spinning_idx = 0;
 
 var titlePageImgList = [
-    "IMG_2147.jpg",
-    "IMG_1625.jpg",
-    "F95A1932-27EC-4F4E-B7B2-0E9B825087E2.JPG",
-    "IMG_2149.jpg",
-    "IMG_3428.jpg",
-    "IMG_3639.jpg",
-    "IMG_0229 2.jpg"
+    "aj1angle.jpg",
+    "bruins.jpg",
+    "beachrock.JPG",
+    "shark.png",
+    "ramen1.jpg",
+    "plunk.jpg",
+    "beauty.png",
+    "jakespine.png",
+    "stop.png",
+    "catmural.png",
+    "trippydoor.png",
+    "aj1.jpg",
+    "ramen2.jpg",
+    "paintdrag.png"
 ];
 
-var titlePageIdx = 0, lastMin = 0, title_timeout = 10;;
+var titlePageIdx = 0, lastMin = 0, title_timeout = 2;
 
 function rotateSpinnyThing(){
     imgSpinnyThing = document.getElementById("spinny_thingy");
