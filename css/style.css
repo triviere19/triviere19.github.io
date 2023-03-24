@@ -88,6 +88,14 @@ h2{
     margin-bottom: 0px;
 }
 
+.homepage_link{
+    background-color: Black;
+    color: White;
+    font-family: Helvetica Neue Extended Oblique;
+    font-size: 100px;
+    text-decoration: none;
+}
+
 .navbar{
     width: 100%;
     background-color: Black;
