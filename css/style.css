@@ -160,3 +160,9 @@ h2{
     font-family: Helvetica Neue Extended Oblique;
     vertical-align: middle;
 }
+
+.footer_text{
+    color: white;
+    font-family: Helvetica Neue Extended Oblique;
+    padding: 5px;
+}
