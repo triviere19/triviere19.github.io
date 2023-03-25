@@ -33,6 +33,9 @@ body{
     justify-content: center;
     text-align: center;
     color: black;
+    padding-bottom: 340px;
+    position: relative;
+    min-height: 100%;
 }
 
 #time {
@@ -160,17 +163,30 @@ h2{
     height: 45px;
 }
 
-.footer{
-    background: Black;
+footer{
+    position: absolute;
+    bottom: 0;
+    background: White;
     width: 100%;
-    padding: 50px;
     color: white;
     font-family: Helvetica Neue Extended Oblique;
     vertical-align: middle;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.footer svg{
+    width: 100%;
+    height: 240px;
+    /*z-index: -1;*/
 }
 
 .footer_text{
     color: white;
+    width: 100%;
+    background-color: Black;
     font-family: Helvetica Neue Extended Oblique;
-    padding: 5px;
+    padding: 50px;
 }
