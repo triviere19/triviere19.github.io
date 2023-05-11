@@ -48,10 +48,7 @@ const products = [
 
 
 function main(){
-    console.log("main is running");
     const productId = window.location.search.slice(1); // Get the product ID from the URL parameter
-    console.log("hello world!");
-    console.log(productId);
 
     for (let i = 0; i < products.length; i++) {
         const product = products[i];
@@ -60,6 +57,7 @@ function main(){
             const productElement = document.getElementById(product.id);
 
             const productImage = productElement.querySelector(".product-img");
+            console.log(productImage);
             productImage.src = product.image;
 
             const productTitle = productElement.querySelector(".product-title");
