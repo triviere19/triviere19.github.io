@@ -49,6 +49,7 @@ const products = [
 
 function main(){
     const productId = window.location.search.slice(1); // Get the product ID from the URL parameter
+    console.log("hello world!");
     console.log(productId);
 
     for (let i = 0; i < products.length; i++) {
