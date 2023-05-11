@@ -33,7 +33,7 @@ const products = [
     {
         id: "chainsaw",
         title: "SPECIAL DIVISION 4",
-        description: "just tryna cop a feel"
+        description: "just tryna cop a feel",
         price: "$24.99",
         image: "res/artwork/chainsaw.GIF"
     },
