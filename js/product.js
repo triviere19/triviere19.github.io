@@ -63,7 +63,7 @@ function main(){
 
 //            const productTitle = productElement.querySelector("#product-title");
 //            productTitle.textContent = product.title;
-            document.getElementbyId("product-title").textContent = product.title;
+            document.getElementById("product-title").textContent = product.title;
 
 //            const productDescription = productElement.querySelector("#product-description");
 //            productDescription.textContent = product.description;
