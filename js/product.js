@@ -75,6 +75,9 @@ function main(){
 //            productPrice.textContent = product.price;
             document.getElementById("product-price").textContent = product.price;
             document.getElementById("product-price").style.color = "green";
+            document.getElementById("product-price").addEventListener('mouseover', () => {
+                document.getElementById("product-price").textContext = 'Add to Cart';
+            });
 
             break;
         }
