@@ -68,7 +68,7 @@ function main(){
 
 //            const productDescription = productElement.querySelector("#product-description");
 //            productDescription.textContent = product.description;
-            document.getElementById("product-description").textContent = product.description;
+            document.getElementById("product-description").innerHTML = product.description;
             document.getElementById("product-description").style.padding = "50";
 
 //            const productPrice = productElement.querySelector("#product-price");
