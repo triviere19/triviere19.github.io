@@ -56,7 +56,7 @@ function main(){
         if (product.id == productId) { // Check if the product ID matches
             const productElement = document.getElementById(product.id);
 
-            const productImage = productElement.querySelector(".product-img");
+            const productImage = productElement.querySelector("#product-img");
             console.log(productImage);
             productImage.src = product.image;
 
