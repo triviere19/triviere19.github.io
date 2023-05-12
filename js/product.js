@@ -5,21 +5,21 @@ const products = [
     {
         id: "frank",
         title: "FRANK",
-        description: "a man of mystery\nblue man group lookin ass\nwith a hint of homer simpson\nwould look nice in a kitchen",
+        description: "a man of mystery<br>blue man group lookin ass<br>with a hint of homer simpson<br>would look nice in a kitchen",
         price: "$24.99",
         image: "res/artwork/frank.GIF"
     },
     {
         id: "akatsuki",
         title: "AKATSUKI",
-        description: "the world shall know pain\n-pain",
+        description: "the world shall know pain<br>-pain",
         price: "$24.99",
         image: "res/artwork/akatsuki.GIF"
     },
     {
         id: "naruto",
         title: "TEAM 7",
-        description: "in the world\nthose who break the rules are scum\nbut those who abandon their friends\nare worse than scum",
+        description: "in the world<br>those who break the rules are scum<br>but those who abandon their friends<br>are worse than scum",
         price: "$24.99",
         image: "res/artwork/naruto.GIF"
     },
@@ -40,7 +40,7 @@ const products = [
     {
         id: "jujutsu",
          title: "ITADORI",
-         description: "served with white rice your choice of side\nsides:\nsakuna fries,\ncajun sakuna fries,\npbr",
+         description: "served with white rice your choice of side<br>sides:<br>sakuna fries,<br>cajun sakuna fries,<br>pbr",
          price: "$24.99",
          image: "res/artwork/jujutsu.GIF"
     }
