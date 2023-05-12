@@ -60,7 +60,7 @@ var titlePageImgList = [
     "jakespine.png",
     "stop.png",
     "catmural.png",
-    "trippydoor.png",
+    // "trippydoor.png",
     "aj1.jpg",
     "ramen2.jpg",
     "paintdrag.png"
