@@ -60,6 +60,7 @@ function main(){
 //            console.log(productImage);
 //            productImage.src = product.image;
             document.getElementById("product-img").src = product.image;
+            document.getElementById("product-img").width = "30%";
 
 //            const productTitle = productElement.querySelector("#product-title");
 //            productTitle.textContent = product.title;
