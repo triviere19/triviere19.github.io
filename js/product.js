@@ -69,10 +69,12 @@ function main(){
 //            const productDescription = productElement.querySelector("#product-description");
 //            productDescription.textContent = product.description;
             document.getElementById("product-description").textContent = product.description;
+            document.getElementById("product-description").padding = "50";
 
 //            const productPrice = productElement.querySelector("#product-price");
 //            productPrice.textContent = product.price;
             document.getElementById("product-price").textContent = product.price;
+            document.getElementById("product-price").color = "green";
 
             break;
         }
