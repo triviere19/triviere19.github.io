@@ -59,15 +59,19 @@ function main(){
 //            const productImage = productElement.querySelector(".product-img");
 //            console.log(productImage);
 //            productImage.src = product.image;
+            document.getElementById("product-img").src = product.image;
 
-            const productTitle = productElement.querySelector("#product-title");
-            productTitle.textContent = product.title;
+//            const productTitle = productElement.querySelector("#product-title");
+//            productTitle.textContent = product.title;
+            document.getElementbyId("product-title").textContent = product.title;
 
-            const productDescription = productElement.querySelector("#product-description");
-            productDescription.textContent = product.description;
+//            const productDescription = productElement.querySelector("#product-description");
+//            productDescription.textContent = product.description;
+            document.getElementById("product-description").textContent = product.description;
 
-            const productPrice = productElement.querySelector("#product-price");
-            productPrice.textContent = product.price;
+//            const productPrice = productElement.querySelector("#product-price");
+//            productPrice.textContent = product.price;
+            document.getElementById("product-price").textContent = product.price;
 
             break;
         }
