@@ -38,12 +38,6 @@ body{
     min-height: 100%;
 }
 
-#time {
-    font-size: 8rem;
-    top-margin: 0px;
-    font-family: Helvetica Neue Ultra Light;
-}
-
 h1{
     margin-bottom: 3rem;
     font-family: Helvetica Neue Extended Oblique;
@@ -54,9 +48,9 @@ h2{
     opacity: 0.6;
 }
 
-@media(max-width: 700px){
+/* @media(max-width: 700px){
     font-size: 6rem;
-}
+} */
 
 #apollo{
     width: 200px;
