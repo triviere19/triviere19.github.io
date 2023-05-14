@@ -40,7 +40,7 @@ const products = [
     {
         id: "jujutsu",
          title: "ITADORI",
-         description: "served with white rice your choice of side<br>sides:<br>sakuna fries,<br>cajun sakuna fries,<br>pbr",
+         description: "served with white rice and your choice of side<br>sides:<br>sakuna fries,<br>cajun sakuna fries,<br>pbr",
          price: "$24.99",
          image: "res/artwork/jujutsu.GIF"
     }
@@ -65,11 +65,13 @@ function main(){
 //            const productTitle = productElement.querySelector("#product-title");
 //            productTitle.textContent = product.title;
             document.getElementById("product-title").textContent = product.title;
+            document.getElementById("product-title").style.fontFamily = "Helvetica Neue Border";
+            document.getElementById("product-title").style.paddingBottom = "20px";
 
 //            const productDescription = productElement.querySelector("#product-description");
 //            productDescription.textContent = product.description;
             document.getElementById("product-description").innerHTML = product.description;
-            document.getElementById("product-description").style.padding = "50";
+            document.getElementById("product-description").style.paddingBottom = "20px";
 
 //            const productPrice = productElement.querySelector("#product-price");
 //            productPrice.textContent = product.price;
