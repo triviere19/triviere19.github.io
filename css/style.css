@@ -148,6 +148,13 @@ h2{
     text-decoration: none;
 }
 
+.more_art{
+    font-family: Helvetica Neue Border;
+    color: black;
+    margin-top: 80px;
+    margin-bottom: 240px;
+}
+
 .section_title{
     color: White;
 }
